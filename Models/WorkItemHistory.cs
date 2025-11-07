@@ -3,19 +3,15 @@ using System;
 
 namespace UniSight.Models
 {
-    /// <summary>
-    /// Represents the history of changes to a work item.
-    /// </summary>
     public class WorkItemHistory
     {
-        public int HistoryID { get; set; }
-        public int WorkItemID { get; set; }
-        public DateTime ChangedDate { get; set; }
-        public string ChangedBy { get; set; }
-        public string OldState { get; set; }
-        public string NewState { get; set; }
-        public string FieldChanged { get; set; }
-        public string OldValue { get; set; }
-        public string NewValue { get; set; }
+        /// <summary>
+        /// Id of the WorkItemHistory
+        /// </summary>
+        public Guid Id { get; set; }
+        public Guid WorkItem { get; set; }
+        public string Assignee { get; set; }
+        public string AssignedBy { get; set; }
+        public DateTime CreatedAt { get; set; }
     }
 }
