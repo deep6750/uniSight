@@ -16,8 +16,7 @@ namespace UniSight.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<CodeQuality>>> GetAll() =>
-            await _context.CodeQualities.AsNoTracking().ToListAsync();
+        public async Task<ActionResult<IEnumerable<CodeQuality>>> GetAll() => await _context.CodeQualities.ToListAsync();
 
         [HttpGet("{id}")]
         public async Task<ActionResult<CodeQuality>> Get(int id)

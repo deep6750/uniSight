@@ -1,17 +1,19 @@
 using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace UniSight.Models
 {
+    [Table("CodeQuality")]
     public class CodeQuality
     {
-        /// <summary>
-        /// Unique identifier for the code quality record (maps to QualityRecordID)
-        /// </summary>
+        [Key]
+        [Column("QualityRecordID")]
         public int QualityRecordId { get; set; }
 
-        public string? Project { get; set; }
+        public string Project { get; set; }
 
-        public string? Module { get; set; }
+        public string Module { get; set; }
 
         public decimal? TechDebtScore { get; set; }
 
